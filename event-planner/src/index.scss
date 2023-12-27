@@ -1,3 +1,5 @@
+/* intial and body styling */
+$pcolor:#2218A7;
 @mixin center(){
     display: flex;
     justify-content: center;
@@ -17,28 +19,27 @@ body{
    font-family: 'Rubik', sans-serif;
    background-color:whitesmoke;
 }
+/* app styling */
 #root{
     position: relative;
     width: 80%;
-    height: auto;
+    height: 75vh;
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     background-color:#E0EEEE;
+
     .app{ 
+      display: flex;
+      height: 100%;
         @include full();
         position: relative;
         .left{
+          color:$pcolor ;
+          padding: 15px;
         height: 100%;
-        width: 60%;
-        background-image: url("./Assets/20944068.jpg");
+        width: 45%;
+ 
           background-size: cover;
-          }
-          .right{
-            padding: 15px;
-              width: 55%;
-              height: 100%;
-              position: relative;
-          }
           h1{
             text-align: center;
           }
@@ -46,6 +47,68 @@ body{
             margin-top: 1rem;
             display: flex;
             justify-content: center;
-        }}
+        }
+          }
+          .right{           
+              width: 55%;
+              height: 100%;
+              position: relative;
+              img{
+                @include full();
+              }
+          }
+      }
   
 }
+/* home styling */
+.home {
+  text-align: center;
+  color: whitesmoke;
+  @include full;
+  position: relative;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  background-image: url("./Assets/bk.avif");
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    filter: blur(10px); /* Adjust the blur amount as needed */
+    z-index: -1;
+  }
+
+  .top {
+  
+   
+    
+    grid-column: 1 / span 2; 
+    width: 100%;
+    height: 100%; 
+    position: relative;
+  }
+
+  .hleft {
+    padding-top: 20px;
+    width: 100%;
+    height: 100%; 
+    position: relative;
+  }
+
+  .hright {
+    @extend .hleft;
+  }
+  p{
+    margin-top: 20px;
+  }
+  button{
+    margin-top: 20px;
+  }
+}
+

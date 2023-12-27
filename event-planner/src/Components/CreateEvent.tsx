@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import Button from './Button';
-
+import EventImage from "../Assets/EVENT.png"
 function CreateEvent() {
   const [creator, setCreator] = useState('');
   const [eventName, setEventName] = useState('');
@@ -9,7 +9,8 @@ function CreateEvent() {
   const [date, setDate] = useState('2017-06-01'); // Default date
 
   return (
-    <div className="right">
+    <>
+    <div className="left">
       <h1 className="mb-3">Create an event</h1>
       <div className="mb-3">
         <label htmlFor="creator" className="form-label">
@@ -108,6 +109,10 @@ function CreateEvent() {
         <Button txt={'Create'} />
       </div>
     </div>
+    <div className='right'>
+<img src={EventImage} alt="event" />
+    </div>
+    </>
   );
 }
 

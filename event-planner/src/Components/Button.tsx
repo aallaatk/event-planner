@@ -1,14 +1,16 @@
 
 interface Name {
   txt:string
+  icon?:string
 }
 
-function Buttons({txt}:Readonly<Name>) {
+function Buttons({txt,icon}:Readonly<Name>) {
   return (
-    
-    <button type="button" className="btn btn-primary">{txt}</button>
-    
-  )
+    <button className="btn btn-primary">
+      {txt}
+      {icon && <i className={`fa-solid ${icon}`} style={{ color: "white" }}></i>}
+    </button>
+  );
 }
 
 export default Buttons
