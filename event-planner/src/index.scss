@@ -37,7 +37,7 @@ body{
           color:$pcolor ;
           padding: 15px;
         height: 100%;
-        width: 45%;
+        width: 55%;
  
           background-size: cover;
           h1{
@@ -50,12 +50,30 @@ body{
         }
           }
           .right{           
-              width: 55%;
+              width: 45%;
               height: 100%;
               position: relative;
-              img{
-                @include full();
+             overflow-y: scroll;
+             scroll-behavior: smooth;
+             display: flex;
+          align-items: center;
+             flex-direction: column;
+             
+             .card{
+              width: 80%;
+              height: auto;
+              margin-top: 15px;
+              
+              span{
+                font-weight: bold;
+                color: $pcolor;
+                font-size: 16px;
               }
+              .card-bot{
+                display: flex;
+                justify-content: space-evenly;
+              }
+             }
           }
       }
   
@@ -63,26 +81,17 @@ body{
 /* home styling */
 .home {
   text-align: center;
-  color: whitesmoke;
+
   @include full;
   position: relative;
   display: grid;
   padding: 20px;
   grid-template-columns: 1fr 1fr;
-  background-image: url("./Assets/bk.avif");
+color:$pcolor;
   background-size: cover;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit;
-    background-size: cover;
-    filter: blur(10px); /* Adjust the blur amount as needed */
-    z-index: -1;
-  }
+h5,p{
+  color: black;
+}
 
   .top {
   
@@ -92,17 +101,25 @@ body{
     width: 100%;
     height: 100%; 
     position: relative;
+    border-bottom: 2px solid white;
   }
 
   .hleft {
-    padding-top: 20px;
+    font-size: 16px;
+    padding: 20px;
     width: 100%;
     height: 100%; 
     position: relative;
+    border-top: 3px solid $pcolor; 
+    
+
   }
 
   .hright {
+   
     @extend .hleft;
+    border-top: 3px solid  black ;
+    border-left:3px solid white; 
   }
   p{
     margin-top: 20px;
@@ -111,4 +128,10 @@ body{
     margin-top: 20px;
   }
 }
+.browse{
+  @include full();
+  position: relative;
+  
+}
+
 

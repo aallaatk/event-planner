@@ -34,7 +34,7 @@ body {
   color: #2218A7;
   padding: 15px;
   height: 100%;
-  width: 45%;
+  width: 55%;
   background-size: cover;
 }
 #root .app .left h1 {
@@ -46,55 +46,73 @@ body {
   justify-content: center;
 }
 #root .app .right {
-  width: 55%;
+  width: 45%;
   height: 100%;
   position: relative;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-#root .app .right img {
-  width: 100%;
-  height: 100%;
+#root .app .right .card {
+  width: 80%;
+  height: auto;
+  margin-top: 15px;
+}
+#root .app .right .card span {
+  font-weight: bold;
+  color: #2218A7;
+  font-size: 16px;
+}
+#root .app .right .card .card-bot {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* home styling */
 .home {
   text-align: center;
-  color: whitesmoke;
   width: 100%;
   height: 100%;
   position: relative;
   display: grid;
   padding: 20px;
   grid-template-columns: 1fr 1fr;
-  background-image: url("./Assets/bk.avif");
+  color: #2218A7;
   background-size: cover;
 }
-.home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-size: cover;
-  filter: blur(10px); /* Adjust the blur amount as needed */
-  z-index: -1;
+.home h5, .home p {
+  color: black;
 }
 .home .top {
   grid-column: 1/span 2;
   width: 100%;
   height: 100%;
   position: relative;
+  border-bottom: 2px solid white;
 }
 .home .hleft, .home .hright {
-  padding-top: 20px;
+  font-size: 16px;
+  padding: 20px;
   width: 100%;
   height: 100%;
   position: relative;
+  border-top: 3px solid #2218A7;
+}
+.home .hright {
+  border-top: 3px solid black;
+  border-left: 3px solid white;
 }
 .home p {
   margin-top: 20px;
 }
 .home button {
   margin-top: 20px;
+}
+
+.browse {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }/*# sourceMappingURL=index.css.map */
