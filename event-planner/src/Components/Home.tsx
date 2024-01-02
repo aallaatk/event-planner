@@ -6,6 +6,7 @@ interface HomeProps {
 }
 
 function Home({ fn, fn1 }: Readonly<HomeProps>) {
+  
   return (
     <div className="home">
       <div className="top">

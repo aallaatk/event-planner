@@ -10,64 +10,6 @@ export interface EventData {
   guestsNumber: '1-10' | '10-30' | '+30';
   date: string;
 }
-// const predefinedEvents = [
-//   {
-//     creator: 'Alice',
-//     eventName: 'Party',
-//     description: 'Join us for a fun-filled evening!',
-//     guestsNumber: '10-30',
-//     date: '2023-12-01',
-//   },
-//   {
-//     creator: 'Bob',
-//     eventName: 'Conference',
-//     description: 'A conference on the latest technologies.',
-//     guestsNumber: '+30',
-//     date: '2023-12-02',
-//   },
-//   {
-//     creator: 'Charlie',
-//     eventName: 'Workshop',
-//     description: 'Hands-on workshop for beginners.',
-//     guestsNumber: '1-10',
-//     date: '2023-12-03',
-//   },
-//   {
-//     creator: 'David',
-//     eventName: 'Meeting',
-//     description: 'Team meeting to discuss project updates.',
-//     guestsNumber: '10-30',
-//     date: '2023-12-04',
-//   },
-//   {
-//     creator: 'Eva',
-//     eventName: 'Seminar',
-//     description: 'Educational seminar on environmental issues.',
-//     guestsNumber: '+30',
-//     date: '2023-12-05',
-//   },
-//   {
-//     creator: 'Frank',
-//     eventName: 'Gathering',
-//     description: 'Casual gathering for networking.',
-//     guestsNumber: '1-10',
-//     date: '2023-12-06',
-//   },
-//   {
-//     creator: 'Grace',
-//     eventName: 'Training',
-//     description: 'Training session for professionals.',
-//     guestsNumber: '10-30',
-//     date: '2023-12-07',
-//   },
-//   {
-//     creator: 'Hannah',
-//     eventName: 'Webinar',
-//     description: 'Interactive webinar on digital marketing.',
-//     guestsNumber: '+30',
-//     date: '2023-12-08',
-//   },
-// ];
 function App() {
   const [showHome, setShowHome] = useState(true);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
@@ -103,19 +45,20 @@ function App() {
 
   return (
     <div className="app">
-      <div className="left">
+      <div className="left"> 
         {showHome && <Home fn={handleBrowse} fn1={handleCreateEvent} />}
         {showCreateEvent && <CreateEvent fn={handleAddEvent} />}
-      </div>
-      <div className="right">
-        {showBrowse && (
+        
+      </div> 
+    <div className="right">
+    {showBrowse && (
           <Browse
             events={events}
             onEdit={handleEditEvent}
             onDelete={handleDeleteEvent}
           />
         )}
-      </div>
+      </div> 
     </div>
   );
 }

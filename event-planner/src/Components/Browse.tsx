@@ -98,8 +98,7 @@ const Browse: React.FC<BrowseProps> = ({ events, onEdit, onDelete }) => {
                       name="guestsNumber"
                       value="1-10"
                       checked={editedEvent.guestsNumber === '1-10'}
-                      onChange={handleInputChange}
-                    />
+                      onChange={handleInputChange}/>
                     1-10
                   </label>
                   <label>
