@@ -129,6 +129,31 @@ body {
   justify-content: space-evenly;
 }
 
+.fire {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px;
+}
+.fire .card-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100% !important;
+}
+.fire .card-group span {
+  color: #2218A7;
+}
+.fire .card-group h5 {
+  text-align: center;
+  font-weight: bold;
+  color: #2218A7;
+}
+.fire .card-group .card {
+  width: 100% !important;
+  height: auto;
+}
+
 /* home styling */
 .home {
   text-align: center;

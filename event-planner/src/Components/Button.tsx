@@ -2,7 +2,7 @@
 interface Name {
   txt:string
   icon?:string
-    fn:()=>void,
+    fn?:()=>void,
    
 }
 
